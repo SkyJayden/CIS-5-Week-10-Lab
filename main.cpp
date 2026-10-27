@@ -9,6 +9,9 @@ using std::endl;
 using std::cin;
 
 void swap_values(int& a, int& b) {
+	int temp = a;
+	a = b;
+	b = temp;
 }
 
 int main() {
@@ -20,8 +23,6 @@ int main() {
 	int* q = &y;
 	cout << *p;
 	cout << *q;
-	*p = 7;
-	*q = 3;
+	swap_values(*p, *q);
 	cout << "After: " << x << " " << y << "\n";
 	return 0;
-}
